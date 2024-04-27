@@ -1,0 +1,21 @@
+<p>viewoneproduct works!</p>
+
+<owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide>
+        
+    <div class="d-flex justify-content-center align-self-center"> 
+        <div class="card card-block border border-info rounded center" style="width: 17rem;">
+               {{product.drugCode}} <img [src]="[product.productImageSlug[0]]" [alt]="" [title]="'product.descriptionString'" height="200"
+                    width="200" class="border border-2">
+                <div class="card-body">
+                    <h5 class="card-title text-desc" [title]="'product.description'">{{product.description}}</h5>
+                    <p class="card-text text-muted">{{product.type}}</p>
+                    <p><span class="text-muted">MRP&nbsp;</span><span
+                            class="text-decoration-line-through">₹{{product.discountPrice}}</span>&nbsp;<span>₹{{product.actualPrice}}</span>
+                        <button type="button" class="btn btn-outline-primary btn-sm ms-3 px-2">Buy Now</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </ng-template>
+    </owl-carousel-o>
